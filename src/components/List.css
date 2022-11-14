@@ -1,0 +1,71 @@
+/* start list */
+.list {
+  display: grid;
+  justify-content: center;
+}
+.list button {
+  border: none;
+  background-color: white;
+}
+.list button:hover {
+  cursor: pointer;
+  box-shadow: 1 1 4px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transform: perspective(1px) translateZ(0);
+}
+
+.fa-circle-o {
+  font-size: 20px;
+}
+.fa-circle-o:hover {
+  font-size: 20px;
+  color: #299486;
+}
+.fa-dot-circle-o {
+  font-size: 20px;
+}
+.fa-dot-circle-o:hover {
+  font-size: 20px;
+  color: #299486;
+}
+.componentList {
+  display: flex;
+  /* width: 140px; */
+  border: 2px solid #299486;
+  padding: 14px 6px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.componentList h3 {
+  margin: 0;
+}
+.fa-edit {
+  font-size: 20px;
+}
+.fa-edit:hover {
+  font-size: 20px;
+  color: #299486;
+}
+.fa-trash {
+  font-size: 20px;
+}
+.fa-trash:hover {
+  color: #299486;
+  font-size: 20px;
+}
+.act {
+  width: 150px;
+  margin: 0px 10px;
+  overflow-wrap: break-word;
+  /* padding-right: 112px; */
+}
+.act1 {
+  width: 150px;
+  margin: 0px 10px;
+  overflow-wrap: break-word;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 2px;
+  /* padding-right: 112px; */
+}
+/* end list  */
