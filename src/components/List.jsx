@@ -8,8 +8,7 @@ function List() {
   const data = useSelector((state) => state);
   console.log(data.kegiatan);
   const allData = data.kegiatan;
-  // console.log(a);
-  // a.forEach((el, index) => console.log(el.value, index));
+
   const dispatch = useDispatch();
   const handleClick = (index) => {
     dispatch(hapusTodo(index));
@@ -20,22 +19,6 @@ function List() {
   };
   return (
     <div>
-      {/* {data.kegiatan.map((item, index) => (
-        <div key={index} className="componentList">
-          <button>
-            <i className="fa fa-circle-o" onClick={() => handleComplete()}></i>
-          </button>
-          <div className="act">
-            <h3>{item}</h3>
-          </div>
-          <button>
-            <i className="fa fa-edit"></i>
-          </button>
-          <button onClick={() => handleClick(index)}>
-            <i className="fa fa-trash"></i>
-          </button>
-        </div>
-      ))} */}
       {allData.map((el, index) => (
         <div key={index} className="componentList">
           <button>
@@ -52,19 +35,6 @@ function List() {
           </button>
         </div>
       ))}
-
-      {/* <button>
-        <i className="fa fa-circle-o"></i>
-      </button>
-      <div className="act">
-        <h3>{props.kegiatan}</h3>
-      </div>
-      <button>
-        <i className="fa fa-edit"></i>
-      </button>
-      <button onClick={hapusTodo}>
-        <i className="fa fa-trash"></i>
-      </button> */}
     </div>
   );
 }
