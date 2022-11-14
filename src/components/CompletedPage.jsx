@@ -22,7 +22,7 @@ function CompletedPage() {
   };
   return (
     <div className="list">
-      <h1>ini completed page</h1>
+      <h1>Halaman Completed</h1>
       {allData
         .filter((kegiatan) => kegiatan.isComplete === true)
         .map((el, index) => (

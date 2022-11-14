@@ -19,7 +19,7 @@ function ActivePage() {
   };
   return (
     <div className="list">
-      <h1>Active page</h1>
+      <h1>Halaman Active</h1>
       {allData
         .filter((kegiatan) => kegiatan.isComplete === false)
         .map((el, index) => (

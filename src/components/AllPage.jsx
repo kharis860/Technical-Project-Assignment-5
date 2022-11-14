@@ -20,6 +20,7 @@ function AllPage() {
   };
   return (
     <div className="list">
+      <h1>Halaman All</h1>
       {allData.map((el, index) => (
         <div key={index} className="componentList">
           {el.isComplete ? (
