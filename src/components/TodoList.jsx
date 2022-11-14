@@ -30,6 +30,10 @@ function TodoList() {
   const teleCompleted = () => {
     tele("/Completed");
   };
+  // const hapusTodo = (index) => {
+  //   console.log(index);
+  // };
+  console.log(data.kegiatan);
 
   return (
     <div className="todo">
@@ -50,6 +54,19 @@ function TodoList() {
           <hr />
         </div>
         <Outlet />
+        {/* <div className="list"> */}
+        {/* <List /> */}
+        {/* {data.kegiatan.map((item, index) => (
+          ))} */}
+        {/* {data.kegiatan.map((item, index) => (
+            // console.log(index)
+            <List key={index} kegiatan={item.aktivitas} />
+          ))} */}
+        {/* {data.kegiatan.forEach((o) => {
+            console.log(o);
+            // <List key={index} kegiatan={o.aktivitas} />;
+          })} */}
+        {/* </div> */}
       </section>
     </div>
   );

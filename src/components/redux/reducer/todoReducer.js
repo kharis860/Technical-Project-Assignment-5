@@ -1,16 +1,13 @@
-import { TAMBAH } from "../action/todoAction";
-import { HAPUS } from "../action/todoAction";
-import { COMPLETE } from "../action/todoAction";
-import { TRUEONLY } from "../action/todoAction";
+import { TAMBAH, HAPUS, COMPLETE } from "../action/todoAction";
 
 const initialState = {
   kegiatan: [
     {
-      value: "tidur",
+      value: "belanja ke pasar",
       isComplete: false,
     },
     {
-      value: "makan",
+      value: "menyelesaikan tugas",
       isComplete: true,
     },
   ],
@@ -30,21 +27,21 @@ function todoReducer(state = initialState, action) {
         kegiatan: kegiatanv1,
       };
     case COMPLETE:
-      const status = state.kegiatan.map((item, index) => {
+      const status = state.kegiatan.map((todoComplete, index) => {
         if (index === action.index) {
-          // return console.log(index);
-          // return [...state.kegiatan. state.kegiatan.isComplete: true];
+          return {
+            ...todoComplete,
+            isComplete: true,
+          };
+        } else {
+          return todoComplete;
         }
       });
       return {
         kegiatan: status,
       };
-    case TRUEONLY:
-      const completed = state.kegiatan.filter((item, index) => console.log(item));
-      break;
     default:
       return state;
   }
 }
-
 export default todoReducer;

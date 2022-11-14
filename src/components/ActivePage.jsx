@@ -1,5 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
-import { hapusTodo, tambahComplete } from "./redux/action/todoAction";
+import { useSelector } from "react-redux";
+import { hapusTodo } from "./redux/action/todoAction";
+import { useDispatch } from "react-redux";
+import { tambahComplete } from "./redux/action/todoAction";
 import swal from "sweetalert";
 
 function ActivePage() {
@@ -17,7 +19,7 @@ function ActivePage() {
   };
   return (
     <div className="list">
-      <h1>Active Page</h1>
+      <h1>Active page</h1>
       {allData
         .filter((kegiatan) => kegiatan.isComplete === false)
         .map((el, index) => (

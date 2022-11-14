@@ -1,5 +1,8 @@
-import { useSelector, useDispatch } from "react-redux";
-import { hapusTodo, tambahComplete } from "./redux/action/todoAction";
+import List from "./List";
+import { useSelector } from "react-redux";
+import { hapusTodo } from "./redux/action/todoAction";
+import { useDispatch } from "react-redux";
+import { tambahComplete } from "./redux/action/todoAction";
 import swal from "sweetalert";
 
 function AllPage() {
@@ -17,7 +20,6 @@ function AllPage() {
   };
   return (
     <div className="list">
-      <h1>All Page</h1>
       {allData.map((el, index) => (
         <div key={index} className="componentList">
           {el.isComplete ? (
